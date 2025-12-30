@@ -1,7 +1,3 @@
-import re
-
-from qfluentwidgets import FluentIcon
-
 from src.tasks.MyBaseTask import MyBaseTask
 
 
@@ -9,24 +5,14 @@ class MyOneTimeWithBGroup(MyBaseTask):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.name = "放在B分组tab里的任务"
-        self.description = "放在不同分组"
-        self.group_name = "B分组"
-        self.group_icon = FluentIcon.AIRPLANE
-        self.icon = FluentIcon.ALIGNMENT
-        self.default_config.update({
-            '下拉菜单选项': "第一",
-            '是否选项默认支持': False,
-            'int选项': 1,
-            '文字框选项': "默认文字",
-            '长文字框选项': "默认文字默认文字默认文字默认文字默认文字默认文字默认文字默认文字默认文字默认文字默认文字默认文字默认文字默认文字默认文字默认文字默认文字默认文字默认文字",
-            'list选项': ['第一', '第二', '第3'],
-        })
-        self.config_type["下拉菜单选项"] = {'type': "drop_down",
-                                      'options': ['第一', '第二', '第3']}
+        self.name = "暮光海岛"
+        self.description = "暮光海岛金币点击"
+        self.group_name = "暮光海岛"
 
     def run(self):
-        self.log_info('放在不同分组tab里的任务!', notify=True)
-
-
-
+        self.log_info('查找金币并点击', notify=True)
+        while True:
+            try:
+                self.wait_click_feature("jinbi", time_out=60)
+            except Exception as e:
+                self.log_info(f'点击金币失败: {e}')
