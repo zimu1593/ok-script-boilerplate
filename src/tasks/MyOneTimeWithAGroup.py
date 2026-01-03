@@ -19,7 +19,7 @@ class MyOneTimeWithAGroup(MyBaseTask):
             # self.log_info('采集-Z任务开始运行!', notify=True)
             # self.send_key('space',0.2)
             self.click(0.86, 0.85)
-            self.click(0.5, 0.9)
+            # self.click(0.5, 0.9)
             self.sleep(5)
             try:
                 guanbi_button = self.wait_feature("guanbi", time_out=5)
