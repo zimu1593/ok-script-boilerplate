@@ -21,3 +21,9 @@ class MyOneTimeWithAGroup(MyBaseTask):
             self.click(0.86, 0.85)
             self.click(0.5, 0.9)
             self.sleep(5)
+            try:
+                guanbi_button = self.wait_feature("guanbi", time_out=5)
+                if guanbi_button:
+                    self.click(guanbi_button)
+            except Exception as e:
+                self.log_info(f'点击失败: {e}')

@@ -117,6 +117,7 @@ config = {
         ["src.tasks.MyOneTimeTask", "MyOneTimeTask"],
         ["src.tasks.MyOneTimeWithAGroup", "MyOneTimeWithAGroup"],
         ["src.tasks.MyOneTimeWithAGroup2", "MyOneTimeWithAGroup2"],
+        ["src.tasks.MyOneTimeWithAGroup3", "MyOneTimeWithAGroup3"],
         ["src.tasks.MyOneTimeWithBGroup", "MyOneTimeWithBGroup"],
         ["src.tasks.MyOneTimeWithBGroup2", "MyOneTimeWithBGroup2"],
         ["ok", "DiagnosisTask"],
